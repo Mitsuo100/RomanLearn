@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Principal</title>
+  </head>
+  <body>
+    <form action="/roman" method="get">
+      <label for="roman">Digite seu número romano:</label>
+      <input type="text" id="roman" name="roman" />
+      <button type="submit">Converter</button>
+    </form>
+
+    <p>Resultado: {{ result }}</p>
+  </body>
+</html>
