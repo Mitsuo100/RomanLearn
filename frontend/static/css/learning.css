@@ -1,0 +1,167 @@
+.learning-section {
+    margin-top: 140px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    color: #888e95;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.progress-bar {
+    height: 5px;
+    margin-top: 9px;
+    background: #e9ebef;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+#progressFill {
+    width: 33%;
+    height: 100%;
+    background: var(--primary);
+    transition: .3s;
+}
+
+.lesson-step {
+    display: none;
+    padding: 50px 15px 35px;
+    text-align: center;
+}
+
+.lesson-step.active {
+    display: block;
+}
+
+.step-number {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.lesson-step h3 {
+    margin-top: 18px;
+    font-size: 27px;
+}
+
+.lesson-step > p {
+    margin: 9px auto 28px;
+    color: var(--muted);
+}
+
+.symbols,
+.comparison {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.symbol-card,
+.comparison > div {
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: #f8f9fb;
+}
+
+.symbol-card {
+    width: 85px;
+}
+
+.symbol-card strong {
+    display: block;
+    font-size: 30px;
+}
+
+.symbol-card span {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.comparison > div {
+    min-width: 150px;
+}
+
+.comparison strong,
+.comparison span {
+    display: block;
+}
+
+.comparison strong {
+    color: var(--primary);
+    font-size: 25px;
+}
+
+.comparison span {
+    margin-top: 5px;
+    color: var(--muted);
+}
+
+.final-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+    background: #f8f9fb;
+    border-radius: 15px;
+}
+
+.final-result span {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.final-result strong {
+    color: var(--primary);
+    font-size: 50px;
+}
+
+.listen-button,
+.secondary-button,
+.primary-button {
+    padding: 11px 17px;
+    border-radius: 9px;
+    font-weight: 700;
+}
+
+.listen-button,
+.secondary-button {
+    border: 1px solid var(--border);
+    background: white;
+}
+
+.listen-button {
+    margin-top: 20px;
+}
+
+.primary-button {
+    border: 0;
+    background: var(--text);
+    color: white;
+}
+
+.primary-button:hover {
+    background: var(--primary);
+}
+
+.secondary-button:disabled {
+    opacity: .4;
+}
+
+.lesson-controls {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+}

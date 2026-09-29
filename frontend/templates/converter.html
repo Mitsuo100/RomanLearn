@@ -1,0 +1,128 @@
+<div class="converter-card">
+
+    <div class="card-header">
+
+        <div>
+            <span class="card-label">CONVERSOR</span>
+
+            <h2>
+                Qual número você quer converter?
+            </h2>
+        </div>
+
+        <div class="roman-symbol">
+            R
+        </div>
+
+    </div>
+
+    <form action="/roman" method="get">
+
+        <label for="roman">
+            Número romano
+        </label>
+
+        <div class="input-container">
+
+            <input
+                type="text"
+                id="roman"
+                name="roman"
+                value="{{ roman if roman else '' }}"
+                placeholder="Ex. XIV"
+                autocomplete="off"
+                autocapitalize="characters"
+                required
+            >
+
+            <button type="submit">
+                Converter →
+            </button>
+
+        </div>
+
+        <span class="input-help">
+            Use I, V, X, L, C, D ou M.
+        </span>
+
+    </form>
+
+    {% if result is defined and result is not none %}
+
+        <div class="result-card">
+
+            <div class="result-header">
+
+                <span>
+                    RESULTADO
+                </span>
+
+                <span class="result-status">
+                    ✓ CONCLUÍDO
+                </span>
+
+            </div>
+
+            <div class="result-numbers">
+
+                <div class="number">
+
+                    <small>
+                        ROMANO
+                    </small>
+
+                    <strong class="roman-result">
+                        {{ roman }}
+                    </strong>
+
+                </div>
+
+                <div class="result-arrow">
+                    →
+                </div>
+
+                <div class="number decimal">
+
+                    <small>
+                        DECIMAL
+                    </small>
+
+                    <strong class="decimal-result">
+                        {{ result }}
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="calculation">
+
+                <small>
+                    CÁLCULO
+                </small>
+
+                <div>
+                    {{ calculation }}
+                </div>
+
+            </div>
+
+        </div>
+
+    {% elif error is defined %}
+
+        <div class="error-card">
+
+            <strong>
+                Número inválido
+            </strong>
+
+            <span>
+                {{ error }}
+            </span>
+
+        </div>
+
+    {% endif %}
+
+</div>
